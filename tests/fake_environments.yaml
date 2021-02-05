@@ -1,0 +1,7 @@
+environments:
+  # This FAKE configuration is used for unit testing
+  dev:
+    server:
+      instance_type: t2.micro
+      min_count: 1
+      max_count: 1
