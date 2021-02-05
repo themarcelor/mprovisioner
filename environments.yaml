@@ -1,0 +1,42 @@
+# This YAML configuration specifies a server with two volumes and two users
+#
+commons:
+  architecture: x86_64
+  root_device_type: ebs
+  virtualization_type: hvm
+  ami_type: amzn2
+environments:
+  # This DEV configuration specifies a server with two volumes and two users
+  dev:
+    server:
+      instance_type: t2.micro
+      min_count: 1
+      max_count: 1
+      volumes:
+        - device: /dev/xvda
+          size_gb: 10
+          type: ext4
+          mount: /
+        - device: /dev/xvdf
+          size_gb: 100
+          type: xfs
+          mount: /data
+      users:
+        - login: user1
+          ssh_key: USER1_SSH_PUB_KEY user1@localhost
+        - login: user2
+          ssh_key: USER2_SSH_PUB_KEY user2@localhost
+  prod:
+    # This PROD configuration specifies a server with one volume and one user
+    server:
+      instance_type: t3.medium
+      min_count: 2
+      max_count: 5
+      volumes:
+        - device: /dev/xvda
+          size_gb: 20
+          type: ext4
+          mount: /
+      users:
+        - login: admin1
+          ssh_key: ADMIN1_SSH_PUB_KEY admin1@localhost
