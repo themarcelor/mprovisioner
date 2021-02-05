@@ -19,9 +19,18 @@ aws_access_key_id=<your_access_key_here>
 aws_secret_access_key=<your_secret_key_here>
 ```
 
-And then just run:
+## How to run
+
+The commands below will install the dependencies and execute the tool (which should seamlessly identify the AWS credentials placed in `~/.aws/credentials`):
 
 ```
 poetry install
 poetry run python mprovisioner/mprovisioner.py
+```
+
+## Unit tests
+
+To execute the unit tests run the command below:
+```
+poetry run python -u -m unittest discover tests
 ```
