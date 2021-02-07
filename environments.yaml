@@ -17,12 +17,12 @@ environments:
           type: ext4
           mount: /
         - device: /dev/xvdf
-          size_gb: 100
+          size_gb: 20
           type: xfs
           mount: /data
       users:
         - login: user1
-          ssh_key: USER1_SSH_PUB_KEY user1@localhost
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD3EKRk06z9+B2XZ6Q+xXzisd3XN1WavD+amTpBK4hnVUIPbkbgqmxodZADzNUmHJrpap8rsfPAWlpG5g8D8KdlcxtyHGA2jdl60E3vyzjtsEcTnvlm7NIb9zDn6p0OHA3NPF0ruip4KVgYX7FTvUC+whXPaqwLXNfOWXy8+L0jJmrS16jMiLiHw2+noL8PSGqFn8a5XjQNY3LMLwwBJyzh28Ti6FrK5PbOi8Y9D9pWn+ahrs8ACneJEuTXzEqyXW5Kpchk1l2AMan6SHgzFmXGbZ3ffS+OOZMfNFaYXPBBQnfY7aHkytbalzSeXXkMzavZi5Yd0K0vwt4qj5FjpsNCNx0yqe1ZiLylp3X8cWhUf17LzAR8KC64A9Kf6pu00I66SSrZra0KXJ/XIivYurC0aLGeEhQmHDAeDFkvnZlJ4glFLtmkXjMhGqM21Xw8YdSgi/v11zMv5q3oYsv0jl3GQvDK2jbXkWQabchKBbmR/FoSrggS7Rzayt+52+E+oSvODb2ZclBNKK1+41Zrxra9IvpTykuQud5eDyK8gKA0J+5B9yc0iBFNxNv0KArxb0rLdZGUY0lD/LIQ1eub9e9rj9kxsG7tEPEvWobnfi/NQAxTSzkY4kxalesc125U4d9PQVu7JTX/xxZwRaj66XHSZTV90s/Sa1UyjLvyvp7CDw== user1@localhost
         - login: user2
           ssh_key: USER2_SSH_PUB_KEY user2@localhost
   prod:
