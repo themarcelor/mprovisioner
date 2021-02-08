@@ -22,9 +22,9 @@ environments:
           mount: /data
       users:
         - login: user1
-          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD3EKRk06z9+B2XZ6Q+xXzisd3XN1WavD+amTpBK4hnVUIPbkbgqmxodZADzNUmHJrpap8rsfPAWlpG5g8D8KdlcxtyHGA2jdl60E3vyzjtsEcTnvlm7NIb9zDn6p0OHA3NPF0ruip4KVgYX7FTvUC+whXPaqwLXNfOWXy8+L0jJmrS16jMiLiHw2+noL8PSGqFn8a5XjQNY3LMLwwBJyzh28Ti6FrK5PbOi8Y9D9pWn+ahrs8ACneJEuTXzEqyXW5Kpchk1l2AMan6SHgzFmXGbZ3ffS+OOZMfNFaYXPBBQnfY7aHkytbalzSeXXkMzavZi5Yd0K0vwt4qj5FjpsNCNx0yqe1ZiLylp3X8cWhUf17LzAR8KC64A9Kf6pu00I66SSrZra0KXJ/XIivYurC0aLGeEhQmHDAeDFkvnZlJ4glFLtmkXjMhGqM21Xw8YdSgi/v11zMv5q3oYsv0jl3GQvDK2jbXkWQabchKBbmR/FoSrggS7Rzayt+52+E+oSvODb2ZclBNKK1+41Zrxra9IvpTykuQud5eDyK8gKA0J+5B9yc0iBFNxNv0KArxb0rLdZGUY0lD/LIQ1eub9e9rj9kxsG7tEPEvWobnfi/NQAxTSzkY4kxalesc125U4d9PQVu7JTX/xxZwRaj66XHSZTV90s/Sa1UyjLvyvp7CDw== user1@localhost
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDSNe+8eFme1ZxKd7fWbQjcx7sZ9FeXR4HMYPimpqVRLPkwIY9jP5NIRHw853jRTJK25kM7xAYu/hKwgG/eq1pYwD1PL+ECN5SBvPMpwyPeONBL49gncv2cqDslyO6KNtIol+iUZhQxXAaV15urAwAnLJH/qFcLq8ZzJKeVLYMmBtCPpUzdgCecQVCQG7MQRFRubLwHeQqAUcWfHb/bF+KPrHW1Aq0FO2hOllsI2f/JHCQiRMSCO+jfJFN6SMeyQnfK8oEQo6VPwvZEE9R8z9YmhEWZahWDxnv23xApfLSA4lWE+ug07dD47QT5z905ISqyFZbhDoffZBNQr7sALZaArpy18NXB2koiKFIJssgtQxzNDRGTrxRC+x4z+ZKjKYoZ3s/JpeXEpvfMD5wNRkPlMOcGsyi1d1AquqdzPGf/FTuwp9NHkB7HhWrM1CXiDGYtSjGH1Sl6cD5vCIVixzA8th0CXzakKZq1yKblQwwuPf8tz8Eut5W0GY7nPFwe9s3yzX0Jam2HTLkdXmgX6HpZ/Z20yNgOhjrjpdSjELohrK2zdhib/r9tZ8ojXJ/r6PefvUOt6WP02AuoooZ/hDZZ201ufamObs1lwvalhnuPEg0Nz1PW6Cy/ghRA6RTdCzNkLDjk1R2NCBQS4WCn10+16tDHqKxwL801CCCqn9cq2Q== user1
         - login: user2
-          ssh_key: USER2_SSH_PUB_KEY user2@localhost
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5vJYu7Kw5NCQ2QL42sDxWTl86Hqp+fq77nGRAwFgHHKErZhsNGUiL+MaaD75MLPYGPWiRoTp76Z+SzsgGGVvGpBD45g2OFXueauWGnFwiyr7SyhpbHMZl5+Mwh5S2gIIvZeu546exfyE2GtovWX3W/gwoctC4WplZ99JqxQoMwtKPDVlORfrBLhz5AEgU1lGHrSrN6e1QAc/jlyY/SRf/NO/zhP2J2w1GDJvjdtu6Rt+nv8Y/98/I88t+Czbeo3UgYLJ/OcBaMBhJ9wocnsW8hK81qYF6/ScTfCSOYHi4L1TQEfHuUdmqMO52xPCCYFfI+xMNJwThwKC1eJa/1UMpVjZpe/2maz83YHE7cbDqZOunNqIf4TNBxAA3fWkCpOti+tBH5ca2ipToMc8IoKsxe+lJoUmAOBpN+NQieT3nq0VoTHYymYjCWKB1DKBE5wbTLttHPADad5BS97ytS/uR5sjz1rYiVa6cHv5FRrxIDsApKELyX5Z19b0DjXy3rVSSfap9BUreGVm6p6w13VHkn/lDli/AqDsdPPDcTP80ZX9Ohco2esCQL5LXQy3Z/hvA127VR7ftCWb2b+es9fFPzgwkhAa5ZRi+UaKcdS2eG2v4kFGB9g5Mt8SIioReCyDvfSCNE+SedjPUfeFcYnzx/auRfdY0UZ7uKL/vn0zCew== user2
   prod:
     # This PROD configuration specifies a server with one volume and one user
     server:
@@ -32,7 +32,7 @@ environments:
       min_count: 2
       max_count: 5
       volumes:
-        - device: /dev/xvda
+        - device: /dev/xvdb
           size_gb: 20
           type: ext4
           mount: /
