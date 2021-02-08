@@ -12,11 +12,17 @@ Make sure you have Python3.6 installed and, to install Poetry, just follow the i
 
 ### AWS configuration
 
-Just set up the default `region`, `aws_access_key_id` & `aws_secret_access_key` parameters under your `~/.aws/credentials` file, like this:
+Just set up the `aws_access_key_id` & `aws_secret_access_key` parameters under your `~/.aws/credentials` file, like this:
 ```
 [default]
 aws_access_key_id=<your_access_key_here>
 aws_secret_access_key=<your_secret_key_here>
+```
+
+And the default `region` under `~/.aws/config`. e.g.:
+```
+[default]
+region=us-east-2
 ```
 
 Please pick the credentials from an user with the appropriate permissions to create the required AWS Resources (Ec2, EBS Volumes, Security Groups, Launch Configuration and Auto Scaling Groups). More information [here](https://aws.amazon.com/iam/features/manage-permissions/).
